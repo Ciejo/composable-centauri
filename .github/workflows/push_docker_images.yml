@@ -47,7 +47,7 @@ jobs:
         name: Parse tag
         id: tag
         run: |
-          VERSION=$(echo ${{ github.ref_name }} | sed "s/v//")
+          VERSION=$(echo v6.3.1-devnet | sed "s/v//")
           MAJOR_VERSION=$(echo $VERSION | cut -d '.' -f 1)
           MINOR_VERSION=$(echo $VERSION | cut -d '.' -f 2)
           PATCH_VERSION=$(echo $VERSION | cut -d '.' -f 3)
@@ -65,6 +65,6 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            ghcr.io/notional-labs/centauri:${{ env.MAJOR_VERSION }}
-            ghcr.io/notional-labs/centauri:${{ env.MAJOR_VERSION }}.${{ env.MINOR_VERSION }}
-            ghcr.io/notional-labs/centauri:${{ env.MAJOR_VERSION }}.${{ env.MINOR_VERSION }}.${{ env.PATCH_VERSION }}
+            ghcr.io/ciejo/centauri:${{ env.MAJOR_VERSION }}
+            ghcr.io/ciejo/centauri:${{ env.MAJOR_VERSION }}.${{ env.MINOR_VERSION }}
+            ghcr.io/ciejo/centauri:${{ env.MAJOR_VERSION }}.${{ env.MINOR_VERSION }}.${{ env.PATCH_VERSION }}
