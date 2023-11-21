@@ -73,4 +73,4 @@ EXPOSE 26656
 EXPOSE 26657
 # grpc
 EXPOSE 9090
-ENTRYPOINT ["centaurid"]
+ENTRYPOINT ["/bin/sh"]
