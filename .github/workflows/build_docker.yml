@@ -2,12 +2,11 @@
 name: Build Docker Image on PR
 
 on:
+  pull_request:
   push:
-    paths:
-      - "**Docker**"
-      - "**.sh"
-      - "**.bash"
-
+    branches:
+      - main
+      
 jobs:
   docker:
     runs-on: ubuntu-latest
