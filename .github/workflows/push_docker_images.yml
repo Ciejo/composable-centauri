@@ -15,6 +15,7 @@
 name: Push Docker Images
 
 on:
+  pull_request:
   push:
     branches:
       - main
