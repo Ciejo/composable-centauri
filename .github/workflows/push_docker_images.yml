@@ -15,12 +15,10 @@
 name: Push Docker Images
 
 on:
-  release:
-    types: [published, created, edited]
   push:
     branches:
       - main
-      
+
 permissions:
   contents: read
   packages: write
