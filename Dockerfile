@@ -60,6 +60,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
 FROM ${RUNNER_IMAGE}
 
 COPY --from=builder /centauri/build/centaurid /bin/centaurid
+COPY --from=busybox:1.35.0-uclibc /bin/sh /bin/sh
 
 ENV HOME /centauri
 WORKDIR $HOME
